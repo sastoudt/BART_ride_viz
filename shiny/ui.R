@@ -15,11 +15,11 @@ bootstrapPage(
   
   dateInput("date1", 
             h3("Date 1"), 
-            value = "2020-01-08"),
+            value = "2020-01-08", min="2020-01-01", max="2020-04-02"),
   
 dateInput("date2", 
           h3("Date 2"), 
-          value = "2020-03-18"),
+          value = "2020-03-18", min="2020-01-01", max="2020-04-02"),
 
 selectInput("station", h3("Select starting station."), selected = "DBRK", unique(bart$from), multiple = FALSE,
             ),

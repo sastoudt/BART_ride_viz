@@ -29,7 +29,7 @@ function(input, output) {
     
     
     arcplot(bart_edges,
-            col.arcs = values, ordering=newOrder,lwd.arcs=2)
+            col.arcs = values, ordering=newOrder,lwd.arcs=2, main=input$date1, col.labels="black")
     
     
     
@@ -65,7 +65,7 @@ function(input, output) {
     
     
     arcplot(bart_edges,
-            col.arcs = values, ordering=newOrder,lwd.arcs=2)
+            col.arcs = values, ordering=newOrder,lwd.arcs=2, main=input$date2, col.labels="black")
     
     
     
