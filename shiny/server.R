@@ -1,5 +1,8 @@
 function(input, output) {
   
+  bart <- read_csv("../data/date-hour-soo-dest-2020.csv", col_names=F)
+  names(bart)=c("date","hour","from", "to","count")
+  
   output$main_plot1 <- renderPlot({
     names(bart)=c("date","hour","from", "to","count")
     bartT = bart %>% group_by(date, from, to) %>% summarise(total = sum(count))
@@ -26,10 +29,11 @@ function(input, output) {
     bart_edges = get.edgelist(g)
     values = get.edge.attribute(g, "col")
     newOrder = get.edge.attribute(g, "orderId")
+    total = get.edge.attribute(g,"total")
     
     
     arcplot(bart_edges,
-            col.arcs = values, ordering=newOrder,lwd.arcs=2, main=input$date1, col.labels="black")
+            col.arcs = values, ordering=newOrder,lwd.arcs=log(total), main=input$date1, col.labels="black")
     
     
     
@@ -62,10 +66,11 @@ function(input, output) {
     bart_edges = get.edgelist(g)
     values = get.edge.attribute(g, "col")
     newOrder = get.edge.attribute(g, "orderId")
+    total = get.edge.attribute(g,"total")
     
     
     arcplot(bart_edges,
-            col.arcs = values, ordering=newOrder,lwd.arcs=2, main=input$date2, col.labels="black")
+            col.arcs = values, ordering=newOrder,lwd.arcs=log(total), main=input$date2, col.labels="black")
     
     
     
