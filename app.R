@@ -1,5 +1,5 @@
 library(shiny)
-wd = "" ## put path to shiny directory here
-setwd(wd)
+#wd = "" ## put path to shiny directory here
+#setwd(wd)
 
 runApp("shiny")
