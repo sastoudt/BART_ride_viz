@@ -1,0 +1,7 @@
+install.packages("dplyr")
+install.packages("shiny")
+install.packages("readr")
+install.packages("devtools")
+install.packages("igraph")
+install.packages("devtools")
+devtools::install_github('gastonstat/arcdiagram')

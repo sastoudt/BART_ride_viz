@@ -1,9 +1,10 @@
+bart <- read_csv("../data/date-hour-soo-dest-2020.csv", col_names=F)
+names(bart)=c("date","hour","from", "to","count")
+
+stationIncome = read.csv("../data/stationIncomeNice.csv", stringsAsFactors = F)
 function(input, output) {
   
-  bart <- read_csv("../data/date-hour-soo-dest-2020.csv", col_names=F)
-  names(bart)=c("date","hour","from", "to","count")
-  
-  stationIncome = read.csv("../data/stationIncomeNice.csv", stringsAsFactors = F)
+
   
   output$main_plot1 <- renderPlot({
     bartT = bart %>% group_by(date, from, to) %>% summarise(total = sum(count))
