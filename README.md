@@ -1,8 +1,7 @@
 # BART_ride_viz
 visualize BART rides over time, change due to COVID
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sastoudt/BART_ride_viz/master?urlpath=shiny/shiny/)
-
+`shiny::runGitHub("BART_ride_viz", "sastoudt", subdir = "shiny")`
 
 ## Data
 
